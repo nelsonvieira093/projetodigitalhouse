@@ -1,14 +1,31 @@
-let usuarios = require('./database/users.json')
+let bancoDeDados = require('./database/users.json')
+
+// Filtrar usuários maiores de 18
+
+const listarUsuariosMaioresDeIdade = () => {
+    const lista = bancoDeDados.filter((usuario) => usuario.idade > 18 )
+
+    return lista
+}
+
+// Adicionar informação de ativo: true para usuários
 
 function adicionarNovaInformacao() {
     
 
-   usuarios = usuarios.map((usuario) => (
+   bancoDeDados = bancoDeDados.map((usuario) => (
         {...usuario, ativo: true}
     ))
 
-  return usuarios
+  return bancoDeDados
  }
 
- adicionarNovaInformacao()
- console.log(usuarios)
+// Adicionar novo usuário
+
+const adicionarUsuario = () => {
+    
+    if (!usuario) {
+        
+        console.log()
+    }
+}
